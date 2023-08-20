@@ -27,6 +27,10 @@ class Service:
         """"""
         os.system(f"systemctl start {self.name}.{unit}")
 
+    def status(self, unit='service'):
+        """"""
+        return os.system(f"systemctl status {self.name}.{unit}")
+        
     # ----------------------------------------------------------------------
     def restart(self, unit='service'):
         """"""
